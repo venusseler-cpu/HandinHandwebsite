@@ -162,28 +162,7 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="hidden md:flex justify-end items-center"
-          >
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-brand-mint to-cyan-400 rounded-[4rem] blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-              <div className="relative w-[400px] h-[550px] bg-white/10 backdrop-blur-xl rounded-[4rem] border border-white/20 overflow-hidden shadow-2xl">
-                 <img 
-                    src="/src/assets/images/regenerated_image_1778672098657.png" 
-                    alt="Cleaning service" 
-                    className="w-full h-full object-cover mix-blend-overlay opacity-60"
-                 />
-                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent"></div>
-                 <div className="absolute bottom-10 left-10 right-10">
-                    <p className="text-white text-3xl font-display font-bold leading-tight mb-2">Qualität & Vertrauen</p>
-                    <p className="text-white/60 text-sm">Zertifizierte Dienstleistungen für Ihren Alltag.</p>
-                 </div>
-              </div>
-            </div>
-          </motion.div>
+      
         </div>
       </AuroraHeroComponent>
     </section>
