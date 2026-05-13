@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+
+  --color-brand-dark: #163A5F;
+  --color-brand-mint: #48C9B0;
+  --color-brand-light: #F5F7FA;
+  --color-brand-slate: #64748b;
+
+  --radius-4xl: 2.5rem;
+  --radius-5xl: 3rem;
+  --radius-6xl: 3.75rem;
+
+  --shadow-mint: 0 10px 15px -3px rgba(72, 201, 176, 0.2), 0 4px 6px -4px rgba(72, 201, 176, 0.1);
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-brand-light text-brand-dark antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-mint text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-mint transition-transform hover:scale-105 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply px-6 py-2 border-2 border-brand-dark text-brand-dark rounded-full text-xs font-bold uppercase tracking-wider hover:bg-brand-dark hover:text-white transition-colors;
+  }
+
+  .badge {
+    @apply inline-block px-4 py-1 bg-white border border-brand-mint/30 rounded-full text-brand-mint text-xs font-bold uppercase tracking-widest mb-6;
+  }
+  
+  .glass-card {
+    @apply bg-white p-6 rounded-[2rem] shadow-xl border border-slate-100;
+  }
+}
+
+@keyframes aurora-glow {
+  0%, 100% {
+    text-shadow: 0 0 40px rgba(72, 201, 176, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 60px rgba(72, 201, 176, 0.7);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-aurora-glow {
+  animation: aurora-glow 4s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
